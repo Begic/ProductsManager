@@ -3,8 +3,6 @@
 public class PriceListPosition
 {
     public int Id { get; set; }
-    public int PositionsNr { get; set; }
-
     public decimal Price { get; set; }
 
     public PriceList PriceList { get; set; }

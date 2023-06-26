@@ -12,4 +12,11 @@ public class DataBaseContext : DbContext
     }
 
     public DbSet<Product> Products { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+
+        builder.Entity<Product>().HasMany(x => x.PriceListPositions).WithOne(x => x.Product);
+    }
 }

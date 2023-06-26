@@ -10,4 +10,5 @@ public class Currency
 
 
     public List<Customer> Customers { get; set; } = new();
+    public List<PriceList> PriceLists { get; set; } = new();
 }
