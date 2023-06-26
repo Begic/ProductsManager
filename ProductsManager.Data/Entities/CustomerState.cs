@@ -8,6 +8,5 @@ public class CustomerState
     [MaxLength(200)][Required] public string Title { get; set; }
     [MaxLength(200)][Required] public string Notes { get; set; }
 
-
     public List<Customer> Customers { get; set; } = new();
 }

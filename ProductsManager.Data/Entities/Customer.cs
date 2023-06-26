@@ -25,8 +25,7 @@ public class Customer
 
 
     public CustomerType CustomeType { get; set; }
-    public int CustomeTypeId { get; set; }
-    
+    public int CustomerTypeId { get; set; }
 
-    public List<CustomerState> CustomerStates { get; set; } = new();
+    public List<CustomerState> CustomerStates { get; set; }= new();
 }
