@@ -30,13 +30,11 @@ public class DataBaseContext : DbContext
 
         builder.Entity<Currency>().HasMany(x => x.PriceLists).WithOne(x => x.Currency).OnDelete(DeleteBehavior.Restrict);
 
-
         builder.Entity<PriceList>().HasMany(x => x.Customers).WithOne(x => x.PriceList).OnDelete(DeleteBehavior.Restrict);
 
         builder.Entity<Currency>().HasMany(x => x.Customers).WithOne(x => x.Currency).OnDelete(DeleteBehavior.Restrict);
 
         builder.Entity<CustomerType>().HasMany(x => x.Customers).WithOne(x => x.CustomeType);
-
 
         builder.Entity<Customer>().HasOne(x => x.PriceList).WithMany(x => x.Customers).OnDelete(DeleteBehavior.Restrict);
     }
